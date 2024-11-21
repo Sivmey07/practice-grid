@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: gray;
+    margin:20px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    grid-template-rows: auto; /* Only one row */
+    height: auto;
+    padding: 20px;
+    background-color: gray;
+  }
+
+  .sidebar { 
+    grid-template-columns: 1 / 2;
+    background-color: #754f4f;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+ .sidebar li:hover {
+    background-color: gray;
+    border-radius: 15px;
+ }
+
+  .self-profile img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar ul {
+    list-style: none; /* Remove bullet points */
+  }
+  
+  .sidebar li {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 15px;
+    cursor: pointer;
+  } 
+
+  .sidebar i {
+    margin-right: 10px;
+    min-width: 25px;
+    text-align: center;
+  }
+
+  .logout {
+    margin-top: auto;
+    cursor: pointer;
+  }
+
+  .main-content {
+    grid-template-columns: 2 / 5;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    overflow-y: auto;
+  }
+
+  .welcome {
+    padding: 20px;
+  }
+  
+  .board {
+    background-color: rgb(234, 129, 147);
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex; 
+    align-items: center; /* Center vertically */
+    justify-content: space-between; 
+    gap: 20px; 
+    height: 140px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .board img {
+    width: 120px; /* Adjust the size of the image */
+    height: 120px;
+    object-fit: cover; /* Ensure the image scales properly */
+  }
+
+  .three-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 20px;
+  }
+
+  .three-container > div {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px ;
+    flex: 1; /* Equal width for each box */
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .three-container > div:hover {
+    background-color: #754f4f;
+  }
+  
+  .chart-img img {
+      margin-top: 10px;
+      width: 100%; 
+      max-width: none; /* Override any default max width */
+      max-height: 270px;
+      border-radius: 10px; 
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  }
+
+  .performance {
+    grid-template-columns: 5 / 7;
+    background-color: #f0e5d8;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .performance h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .performance p {
+    cursor: pointer;
+  }
+
+  /* Navigation in Performance */
+  .nav1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+  }
+  
+  .clients {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .client img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover; /* Ensure images fit within the circle */
+  }
+
+  .client p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #333;
+  }
+  
+  .performance .calendar img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; 
+    }
+
+    .main-content, .performance {
+        width: 100%;
+    }
+
+    .three-container {
+        flex-wrap: wrap; 
+    }
+
+    .clients {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+      .board {
+          flex-direction: column; 
+          height: auto;
+          text-align: center;
+      }
+
+      .board img {
+          margin: 10px 0;
+      }
+  }
+
+  
+  
+  
+  
